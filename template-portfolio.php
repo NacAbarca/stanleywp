@@ -4,7 +4,7 @@
  *
  *
  * @file           template-portfolio.php
- * @package        StanleyWP 
+ * @package        StanleyWP
  * @author         Brad Williams & Carlos Alvarez
  * @copyright      2003 - 2014 Gents Themes
  * @license        license.txt
@@ -22,14 +22,14 @@
       <?php if( rwmb_meta( 'wtf_portfolio_title' ) !== '' ) { ?>
       <?php echo rwmb_meta( 'wtf_portfolio_title' ); ?>
       <hr>
-      <?php } ?> 
+      <?php } ?>
 
       <?php if (have_posts()) : ?>
 
       <?php while (have_posts()) : the_post(); ?>
       <?php the_content(); ?>
-      <?php endwhile; ?> 
-    <?php endif; ?> 
+      <?php endwhile; ?>
+    <?php endif; ?>
 
     </div>
   </div>
@@ -42,7 +42,7 @@
 
   <div class="row mt centered">
 
-    <?php if ( $loop ) : 
+    <?php if ( $loop ) :
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
     <div class="col-lg-4">
@@ -51,7 +51,7 @@
       <?php the_post_thumbnail(); ?>
     </a>
   <?php endif; ?>
-  
+
   <?php if(bi_get_data('project_title', '1')) {?>
   <p><?php the_title(); ?></p>
   <?php } ?>
@@ -62,7 +62,7 @@
 </div>
 
 
-<div class="error-not-found">Sorry, no portfolio entries for while.</div>
+<div class="error-not-found">Lo sentimos, no hay entradas de cartera por tiempo.</div>
 
 <?php endif; ?>
 

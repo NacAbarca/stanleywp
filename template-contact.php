@@ -5,8 +5,8 @@
    Template Name:  Contact Page
  *
  * @file           template-contact.php
- * @package        StanleyWP 
- * @author         Brad Williams & Carlos Alvarez 
+ * @package        StanleyWP
+ * @author         Brad Williams & Carlos Alvarez
  * @copyright      2014 Gents Themes
  * @license        license.txt
  * @version        Release: 3.0.3
@@ -18,24 +18,24 @@
    <?php
    if(isset($_POST['submitted'])) {
     if(trim($_POST['contactName']) === '') {
-        $nameError = 'Please enter your name.';
+        $nameError = 'Por favor, escriba su nombre.';
         $hasError = true;
     } else {
         $name = trim($_POST['contactName']);
     }
 
     if(trim($_POST['email']) === '')  {
-        $emailError = 'Please enter your email address.';
+        $emailError = 'Por favor, introduzca su dirección de correo electrónico.';
         $hasError = true;
     } else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['email']))) {
-        $emailError = 'You entered an invalid email address.';
+        $emailError = 'Ha introducido una dirección de correo inválida.';
         $hasError = true;
     } else {
         $email = trim($_POST['email']);
     }
 
     if(trim($_POST['comments']) === '') {
-        $commentError = 'Please enter a message.';
+          $commentError = 'Por favor ingrese un mensaje.';
         $hasError = true;
     } else {
         if(function_exists('stripslashes')) {
@@ -50,8 +50,8 @@
         if (!isset($emailTo) || ($emailTo == '') ){
             $emailTo = get_option('admin_email');
         }
-        $subject = '[StanleyWP] From '.$name;
-        $body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
+        $subject = '[Nac Abarca] From '.$name;
+        $body = "Nombre: $name \n\Correo: $email \n\Comentarios: $comments";
         $headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
         wp_mail($emailTo, $subject, $body, $headers);
@@ -87,20 +87,20 @@
 
             <section class="post-entry">
 
-                <div class="row mt">    
+                <div class="row mt">
             <div class="col-lg-8 col-lg-offset-2">
 
              <?php if(isset($emailSent) && $emailSent == true) { ?>
              <div class="alert alert-success">
-                <p>Thanks, your email was sent successfully.</p>
+                <p>Muchas Gracias, su correo electrónico fue enviado con éxito.</p>
             </div>
             <?php } else { ?>
 
             <?php if(isset($hasError) || isset($captchaError)) { ?>
             <div class="alert alert-danger alert-dismissable">
                 <a class="close" data-dismiss="alert">×</a>
-                <h4 class="alert-heading">Sorry, an error occured.</h4>
-                <p class="error">Please try again!<p>
+                <h4 class="alert-heading">Disculpe, ocurrió un error.</h4>
+                <p class="error">¡Inténtalo de nuevo!<p>
                 </div>
                 <?php } ?>
 
@@ -108,7 +108,7 @@
                     <fieldset>
                         <div class="form-group">
 
-                            <input class="form-control" type="text" name="contactName" id="contactName" value="" placeholder="Name" />
+                            <input class="form-control" type="text" name="contactName" id="contactName" value="" placeholder="Ingrese con su nombre" />
                             <span class="input-icon fui-check-inverted"></span>
                             <?php if(isset($nameError)) { ?>
                             <p><span class="error"><?=$nameError;?></span></p>
@@ -118,7 +118,7 @@
                         </div>
                         <div class="form-group">
 
-                            <input class="form-control" type="text" name="email" id="email" value="" placeholder="Email" />
+                            <input class="form-control" type="text" name="email" id="email" value="" placeholder="Ingrese con su correo" />
                             <span class="input-icon fui-check-inverted"></span>
                             <?php if(isset($emailError)) { ?>
                             <p><span class="error"><?=$emailError;?></span></p>
@@ -128,14 +128,14 @@
                         </div>
                         <div class="form-group">
 
-                            <textarea class="form-control" name="comments" id="commentsText" rows="10" cols="20" placeholder="Comments"></textarea>
+                            <textarea class="form-control" name="comments" id="commentsText" rows="10" cols="20" placeholder="Ingrese con su comentario"></textarea>
                             <?php if(isset($commentError)) { ?>
                             <p><span class="error"><?=$commentError;?></span></p>
                             <?php } ?>
                              <br>
                         </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-success">SUBMIT</button>
+                            <button type="submit" class="btn btn-success">Enviar</button>
                         </div>
                         <input type="hidden" name="submitted" id="submitted" value="true" />
                     </fieldset>
@@ -153,12 +153,12 @@
 
 
 
-<?php endwhile; ?> 
+<?php endwhile; ?>
 
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <nav class="navigation">
-       <div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'gents' ) ); ?></div>
-       <div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'gents' ) ); ?></div>
+       <div class="previous"><?php next_posts_link( __( '&#8249; Publicaciones más antiguas', 'gents' ) ); ?></div>
+       <div class="next"><?php previous_posts_link( __( 'Publicaciones más nuevas &#8250;', 'gents' ) ); ?></div>
    </nav><!-- end of .navigation -->
 <?php endif; ?>
 
@@ -166,19 +166,19 @@
 
     <article id="post-not-found" class="hentry clearfix">
         <header>
-           <h1 class="title-404"><?php _e('404 &#8212; Fancy meeting you here!', 'gents'); ?></h1>
+           <h1 class="title-404"><?php _e('404 &#8212; ¡Fantasía conocerte aquí!', 'gents'); ?></h1>
        </header>
        <section>
-           <p><?php _e('Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents'); ?></p>
+           <p><?php _e('No entre en pánico, lo superaremos juntos. Exploremos nuestras opciones aquí.', 'gents'); ?></p>
        </section>
        <footer>
-           <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
+           <h6><?php _e( 'Puedes regresar', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Initio', 'gents' ); ?>"><?php _e( '&#9166; Inicio', 'gents' ); ?></a> <?php _e( 'o busque la página que estaba buscando', 'gents' ); ?></h6>
            <?php get_search_form(); ?>
        </footer>
 
    </article>
 
-<?php endif; ?>  
+<?php endif; ?>
 
 
 

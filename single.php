@@ -48,7 +48,7 @@
 
           <div id="author-meta">
             <?php if ( function_exists( 'get_avatar' ) ) { echo get_avatar( get_the_author_meta( 'email' ), '80' ); }?>
-            <div class="about-author"><?php _e( 'About', 'gents' ); ?> <?php the_author_posts_link(); ?></div>
+            <div class="about-author"><?php _e( 'Acerca de', 'gents' ); ?> <?php the_author_posts_link(); ?></div>
             <p><?php the_author_meta( 'description' ) ?></p>
           </div><!-- end of #author-meta -->
 
@@ -71,11 +71,11 @@
                           <footer class="article-footer">
                             <?php if ( bi_get_data( 'enable_disable_tags', '1' ) == '1' ) {?>
                             <div class="post-data">
-                              <?php the_tags( __( 'TAGS:', 'gents' ) . ' ', ' - ', '<br />' ); ?>
+                              <?php the_tags( __( 'Etiquetas:', 'gents' ) . ' ', ' - ', '<br />' ); ?>
                             </div><!-- end of .post-data -->
                             <?php } ?>
 
-                            <div class="post-edit"><?php edit_post_link( __( 'Edit', 'gents' ) ); ?></div>
+                            <div class="post-edit"><?php edit_post_link( __( 'Editar', 'gents' ) ); ?></div>
                           </footer>
 
 
@@ -104,8 +104,8 @@
                   <div class="col-lg-8 col-lg-offset-2">
 
                     <nav class="navigation">
-                     <div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'gents' ) ); ?></div>
-                     <div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'gents' ) ); ?></div>
+                     <div class="previous"><?php next_posts_link( __( '&#8249; Entradas más antiguas', 'gents' ) ); ?></div>
+                     <div class="next"><?php previous_posts_link( __( 'Entradas más recientes &#8250;', 'gents' ) ); ?></div>
                    </nav><!-- end of .navigation -->
 
                  </div>
@@ -121,13 +121,13 @@
             <div class="row">
               <div class="col-lg-8 col-lg-offset-2">
                 <header>
-                 <h1 class="title-404"><?php _e( '404 &#8212; Fancy meeting you here!', 'gents' ); ?></h1>
+                 <h1 class="title-404"><?php _e( '404 &#8212; ¡Fantasía conocerte aquí!', 'gents' ); ?></h1>
                </header>
                <section>
-                 <p><?php _e( 'Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents' ); ?></p>
+                 <p><?php _e( 'No entre en pánico, lo superaremos juntos. Exploremos nuestras opciones aquí.', 'gents' ); ?></p>
                </section>
                <footer>
-                 <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
+                 <h6><?php _e( 'Puedes regresar', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Inicio', 'gents' ); ?>"><?php _e( '&#9166; Inicio', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
                  <?php get_search_form(); ?>
                </footer>
 

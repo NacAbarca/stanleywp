@@ -5,8 +5,8 @@
    Template Name: Blog
  *
  * @file           blog.php
- * @package        StanleyWP 
- * @author         Brad Williams & Carlos Alvarez 
+ * @package        StanleyWP
+ * @author         Brad Williams & Carlos Alvarez
  * @copyright      2011 - 2014 Gents Themes
  * @license        license.txt
  * @version        Release: 3.0.3
@@ -19,7 +19,7 @@
   <?php if (have_posts()) : ?>
 
   <?php
-  $c = 0; 
+  $c = 0;
   $color_id = 'grey';
   ?>
 
@@ -40,9 +40,9 @@
               <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
 
-                  <section class="post-meta">          
+                  <section class="post-meta">
                       <p class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?><ba><?php the_author_meta( 'display_name' ); ?></ba></p>
-                         <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>                
+                         <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>
                   </section><!-- end of .post-meta -->
 
                   <header>
@@ -55,7 +55,7 @@
                     </a>
                   <?php endif; ?>
 
-                  
+
 
 
                   <?php the_content(); ?>
@@ -70,20 +70,20 @@
                             'echo' => 1 )
                             ); ?>
 
-                          </section><!-- end of .post-entry -->  
+                          </section><!-- end of .post-entry -->
 
                         </div>
 
                       </div><!-- /row -->
                     </div> <!-- /container -->
-                  </div> 
+                  </div>
 
 
                 </article><!-- end of #post-<?php the_ID(); ?> -->
 
 
 
-              <?php endwhile; ?> 
+              <?php endwhile; ?>
 
               <?php if (  $wp_query->max_num_pages > 1 ) : ?>
               <div class="container">
@@ -93,8 +93,8 @@
                   <hr>
               <nav>
                 <ul class="pager">
-                 <li class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'gents' ) ); ?></li>
-                 <li class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'gents' ) ); ?></li>
+                 <li class="previous"><?php next_posts_link( __( '&#8249; Publicaciones anteriores', 'gents' ) ); ?></li>
+                 <li class="next"><?php previous_posts_link( __( 'Publicaciones más nuevas &#8250;', 'gents' ) ); ?></li>
                </ul><!-- end of .navigation -->
              </nav>
            </div>
@@ -109,13 +109,13 @@
               <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
           <header>
-           <h1 class="title-404"><?php _e('404 &#8212; Fancy meeting you here!', 'gents'); ?></h1>
+           <h1 class="title-404"><?php _e('404 - ¡Me encantaría conocerte!', 'gents'); ?></h1>
          </header>
          <section>
-           <p><?php _e('Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents'); ?></p>
+           <p><?php _e('No entre en pánico, lo superaremos juntos. Exploremos nuestras opciones aquí.', 'gents'); ?></p>
          </section>
          <footer>
-           <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
+           <h6><?php _e( 'Puedes regresar', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Inicio', 'gents' ); ?>"><?php _e( '&#9166; Inicio', 'gents' ); ?></a> <?php _e( 'o busca la página que estabas buscando', 'gents' ); ?></h6>
            <?php get_search_form(); ?>
          </footer>
          </div>
@@ -123,7 +123,7 @@
        </div>
        </article>
 
-     <?php endif; ?>  
+     <?php endif; ?>
 
 
    </div> <!-- /col-lg-8 -->

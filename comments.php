@@ -4,8 +4,8 @@
  *
  *
  * @file           comments.php
- * @package        StanleyWP 
- * @author         Brad Williams & Carlos Alvarez 
+ * @package        StanleyWP
+ * @author         Brad Williams & Carlos Alvarez
  * @copyright      2010 - 2014 Gents Themes
  * @license        license.txt
  * @version        Release: 3.0.3
@@ -23,7 +23,7 @@
             <i class="icon-comments-alt"></i>
             <span>
                 <?php
-                    printf( _nx( 'One Comment', '%1$s Comments', '', 'comments title', 'wpex' ),
+                    printf( _nx( 'Un comentario', '%1$s Comentarios', '', 'comments title', 'wpex' ),
                         number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
                 ?>
             </span>
@@ -38,21 +38,21 @@
             if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
         <nav class="navigation comment-navigation row clr" role="navigation">
-            <h4 class="assistive-text section-heading heading"><span><?php _e( 'Comment navigation', 'wpex' ); ?></span></h4>
-            <div class="nav-previous span_12 col clr-margin"><?php previous_comments_link( __( '&larr; Older Comments', 'wpex' ) ); ?></div>
-            <div class="nav-next span_12 col"><?php next_comments_link( __( 'Newer Comments &rarr;', 'wpex' ) ); ?></div>
+            <h4 class="assistive-text section-heading heading"><span><?php _e( 'Comentario de navegación', 'wpex' ); ?></span></h4>
+            <div class="nav-previous span_12 col clr-margin"><?php previous_comments_link( __( '&larr; Comentarios antiguos', 'wpex' ) ); ?></div>
+            <div class="nav-next span_12 col"><?php next_comments_link( __( 'Comentarios mas nuevos &rarr;', 'wpex' ) ); ?></div>
         </nav>
         <?php endif; // Check for comment navigation ?>
 
         <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.' , 'wpex' ); ?></p>
+        <p class="no-comments"><?php _e( 'Los comentarios están cerrados.' , 'wpex' ); ?></p>
         <?php endif; ?>
 
     <?php endif; // have_comments() ?>
 
     <?php comment_form(
         $fields =  array(
-            'title_reply' => '<span>'. __( 'Leave a Reply', 'wpex') .'</span>'
+            'title_reply' => '<span>'. __( 'Deja una respuesta', 'wpex') .'</span>'
         ) ); ?>
 
 </div><!-- #comments -->

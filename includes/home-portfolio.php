@@ -30,23 +30,23 @@ $home_portfolio_query = new WP_Query(
   );
 
 if ( $home_portfolio_query->posts ) :
-	
- ?>     
+
+ ?>
 
 <!-- +++++ Projects Section +++++ -->
 
 <div class="container pt">
   <div class="row mt centered">
-    
-    <?php $home_portfolio_title = bi_get_data('home_portfolio_title') ? bi_get_data('home_portfolio_title') : __('Recent Work','gents'); ?>
-    
+
+    <?php $home_portfolio_title = bi_get_data('home_portfolio_title') ? bi_get_data('home_portfolio_title') : __('Trabajo reciente','gents'); ?>
+
     <?php
     $count=0;
     while ( $home_portfolio_query->have_posts() ) : $home_portfolio_query->the_post();
     $count++
-    
+
     ?>
-    <!-- PORTFOLIO ITEM -->      
+    <!-- PORTFOLIO ITEM -->
 
     <div class="col-lg-4">
      <?php if ( has_post_thumbnail()) : ?>
@@ -62,6 +62,6 @@ if ( $home_portfolio_query->posts ) :
 
 <?php endwhile; ?>
 </div><!-- /row -->
-</div><!-- /container -->  
+</div><!-- /container -->
 
 <?php endif; wp_reset_postdata(); ?>

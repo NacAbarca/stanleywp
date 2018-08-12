@@ -32,13 +32,13 @@ function gents_comment( $comment, $args, $depth ) {
 	?>
 	<li id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-        
+
 			<div class="comment-author vcard">
 				<?php echo get_avatar( $comment, 40 ); ?>
 			</div><!-- .comment-author -->
-			
+
             <div class="comment-details comment-body clr">
-            
+
                 <header class="comment-meta">
                 	<cite class="fn"><?php comment_author_link(); ?></cite>
                     <br />
@@ -47,25 +47,25 @@ function gents_comment( $comment, $args, $depth ) {
                         printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
                             esc_url( get_comment_link( $comment->comment_ID ) ),
                             get_comment_time( 'c' ),
-                            sprintf( _x( '%1$s at %2$s', '1: date, 2: time', 'wpex' ), get_comment_date(), get_comment_time() )
+                            sprintf( _x( '%1$s a las %2$s', '1: fecha, 2: hora', 'wpex' ), get_comment_date(), get_comment_time() )
                         ); ?>
                     </div><!-- .comment-date -->
                 </header><!-- .comment-meta -->
-    
+
                 <?php if ( '0' == $comment->comment_approved ) : ?>
-                    <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wpex' ); ?></p>
+                    <p class="comment-awaiting-moderation"><?php _e( 'Tu comentario está esperando ser moderado.', 'wpex' ); ?></p>
                 <?php endif; ?>
-    
+
                 <div class="comment-content">
                     <?php comment_text(); ?>
                 </div><!-- .comment-content -->
-    
+
                 <div class="reply">
-                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'reply', 'wpex' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'respuesta', 'wpex' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
                 </div><!-- .reply -->
-                
+
             </div><!-- .comment-details -->
-            
+
 		</article><!-- #comment-## -->
 	<?php
 		break;

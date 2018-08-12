@@ -31,53 +31,53 @@ $meta_boxes = array();
 	//Individual Portfolio
 	$meta_boxes[] = array(
 		'id'         => 'portfolio_metabox',
-		'title'      => 'Options',
+		'title'      => 'Opciones',
 		'pages'      => array( 'portfolio', ), // Post type
 		'context'    => 'normal',
 		'priority'   => 'high',
 		'show_names' => true,
 		'fields'     => array(
 			array(
-				'name' => __('Main Title','gents'),
-				'desc' => __('This is the content that will be displayed at the very top. Optional.','gents'),
+				'name' => __('Titulo principal','gents'),
+				'desc' => __('Este es el contenido que se mostrará en la parte superior. (Opcional)','gents'),
 				'id' => $prefix . 'portfolio_top_title',
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
-				'std' => '<h3>PROJECT NAME</h3>',
+				'std' => '<h3>NOMBRE DEL PROYECTO</h3>',
 			),
 			array(
-				'name'    => __( 'Show Categories', 'gents' ),
+				'name'    => __( 'Mostrar categorías', 'gents' ),
 				'id'      => $prefix . 'port_cats',
 				'type'    => 'radio',
 				'options' => array(
-					'value1' => __( 'Yes', 'gents' ),
+					'value1' => __( 'Si', 'gents' ),
 					'value2' => __( 'No', 'gents' ),
 				),
 			),
 			array(
-				'name' => __( 'Images', 'gents' ),
+				'name' => __( 'Imágenes', 'gents' ),
 				'id'   => "thickbox",
 				'type' => 'thickbox_image',
 			),
-		
+
 		),
 	);
 
 
 	// Portfolio Page
 $meta_boxes[] = array(
-	'title'  => __( 'Options', 'gents' ),
+	'title'  => __( 'Opciones', 'gents' ),
 	'pages' => array('page'),
 	'fields' => array(
 			array(
-				'name' => __('Title','gents'),
-				'desc' => __('Enter the text to be displayed above the portfolio items. ','gents'),
+				'name' => __('Título','gents'),
+				'desc' => __('Ingrese el texto que se mostrará encima de los portofolios de la cartera. ','gents'),
 				'id' => $prefix . 'portfolio_title',
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
-				'std'  => '<h3>LATEST WORKS</h3>',
+				'std'  => '<h3>ÚLTIMAS OBRAS</h3>',
 			),
 
 	),
@@ -89,64 +89,64 @@ $meta_boxes[] = array(
 
 // About
 $meta_boxes[] = array(
-	'title'  => __( 'Options', 'gents' ),
+	'title'  => __( 'Opciones', 'gents' ),
 	'pages' => array('page'),
 	'fields' => array(
 			array(
-				'name' => __('Title','gents'),
-				'desc' => __('Enter the text to be displayed above the main content. ','gents'),
+				'name' => __('Título','gents'),
+				'desc' => __('Ingrese el texto que se mostrará sobre el contenido principal. ','gents'),
 				'id' => $prefix . 'about_title',
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
-				'std'  => '<h1>About Stanley!</h1>',
+				'std'  => '<h1>¡Sobre Stanley!</h1>',
 			),
-		
+
 			array(
-				'name' => __('Left Text','gents'),
-				'desc' => __('Enter the text to be displayed under the columns on the left. Optional.','gents'),
+				'name' => __('Texto izquierdo','gents'),
+				'desc' => __('Ingrese el texto que se mostrará debajo de las columnas de la izquierda. (Opcional)','gents'),
 				'id' => $prefix . 'about_left_txt',
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
-				'std'  => '<h4>THE THINKING</h4>
-				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>',
+				'std'  => '<h4>EL PENSAMIENTO</h4>
+				<p>Contrario a la creencia popular, Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raíces en una pieza de literatura latina clásica del año 45 aC, lo que hace más de 2000 años. Richard McClintock, un profesor de latín en Hampden-Sydney College en Virginia, buscó una de las palabras latinas más oscuras, consectetur, de un pasaje de Lorem Ipsum, y pasando por las citas de la palabra en la literatura clásica, descubrió la fuente indudable.</p>',
 			),
 
 			array(
-				'name' => __('Right Text','gents'),
-				'desc' => __('Enter the text to be displayed under the columns on the right. Optional.','gents'),
+				'name' => __('Texto derecha','gents'),
+				'desc' => __('Ingrese el texto que se mostrará debajo de las columnas a la derecha. (Opcional)','gents'),
 				'id' => $prefix . 'about_right_txt',
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
-				'std'  => '<h4>THE SKILLS</h4>
+				'std'  => '<h4>LAS HABILIDADES</h4>
 				Wordpress
 				<div class="progress">
 					<div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-						<span class="sr-only">60% Complete</span>
+						<span class="sr-only">60% Completar</span>
 					</div>
 				</div>
 
 				Photoshop
 				<div class="progress">
 					<div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-						<span class="sr-only">80% Complete</span>
+						<span class="sr-only">80% Completar</span>
 					</div>
 				</div>
-				
+
 				HTML + CSS
 				<div class="progress">
 					<div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-						<span class="sr-only">95% Complete</span>
+						<span class="sr-only">95% Completar</span>
 					</div>
 				</div>',
 			),
 
 
 			array(
-				'name' => __('Column Content','gents'),
-				'desc' => __('Enter the text to be displayed. Optional.','gents'),
+				'name' => __('Contenido de columna','gents'),
+				'desc' => __('Ingrese el texto que se mostrará. (Opcional)','gents'),
 				'id' => $prefix . 'about_col',
 				'type' => 'textarea',
 				'cols' => 20,

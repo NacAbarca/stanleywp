@@ -47,7 +47,7 @@ function gents_comment( $comment, $args, $depth ) {
                         printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
                             esc_url( get_comment_link( $comment->comment_ID ) ),
                             get_comment_time( 'c' ),
-                            sprintf( _x( '%1$s at %2$s', '1: date, 2: time', 'wpex' ), get_comment_date(), get_comment_time() )
+                            sprintf( _x( '%1$s a las %2$s', '1: fecha, 2: hora', 'wpex' ), get_comment_date(), get_comment_time() )
                         ); ?>
                     </div><!-- .comment-date -->
                 </header><!-- .comment-meta -->
